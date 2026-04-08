@@ -1,212 +1,242 @@
-# Code Review Analyzer
+# 🧠 Adaptive AI Code Review System
 
-A comprehensive Python code analyzer that detects bugs, style issues, and optimization opportunities using both static analysis and AI-powered insights.
+An advanced AI-powered system for analyzing Python code with **code understanding, performance prediction, and personalized feedback** — designed to go beyond traditional static analysis tools.
 
-## Features
+---
 
-- **Bug Detection**: Catches logical errors, runtime issues, and edge cases
-- **Style Analysis**: Enforces PEP 8 and best practices
-- **Optimization**: Identifies performance bottlenecks and complexity issues
-- **Security Scanning**: Detects vulnerabilities and security risks
-- **AI-Powered**: Uses Google Gemini for intelligent code review
-- **Dual Interface**: Both CLI and Web UI (Streamlit)
+## 🚀 Overview
 
-## Installation
+This project transforms conventional code review into an **intelligent, adaptive, and insight-driven process** by combining:
 
-### Prerequisites
-- Python 3.8 or higher
-- pip (Python package manager)
+* 🔍 Static Analysis
+* 🧠 AI-powered Code Understanding
+* ⚡ Performance Prediction
+* 🎯 Personalized Feedback Engine
 
-### Setup
+Unlike traditional analyzers, this system delivers **context-aware insights** and simulates **adaptive intelligence**, aligning with modern AI-assisted development tools.
+
+---
+
+## ✨ Key Features
+
+### 🧠 Code Understanding Engine
+
+* Interprets what the code is doing
+* Generates high-level intent explanations
+
+> Example: *“This code defines functions and performs logical operations.”*
+
+---
+
+### ⚡ Performance Prediction
+
+* Detects inefficient patterns (e.g., nested loops)
+* Predicts time complexity issues (e.g., O(n²))
+
+---
+
+### 🎯 Personalized Feedback System
+
+* Adapts suggestions based on user level (Beginner / Advanced)
+* Provides actionable, targeted improvements
+
+---
+
+### 📊 AI Code Quality Score
+
+* Scores code quality (0–100)
+* Based on bugs, style, complexity, and performance
+
+---
+
+### 📈 Code Complexity Insight
+
+* Uses Radon metrics
+* Classifies code as optimal or high complexity
+
+---
+
+### 🚨 Priority Recommendation Engine
+
+* Highlights the most critical action:
+
+  * Fix bugs
+  * Optimize performance
+  * Improve maintainability
+
+---
+
+### 🔍 Hybrid Analysis System
+
+Combines multiple industry-standard tools:
+
+* **Pylint** → Code correctness
+* **Flake8** → Style enforcement
+* **Radon** → Complexity analysis
+* **Bandit** → Security scanning
+
+---
+
+### 🤖 AI-Powered Review (Gemini Integration)
+
+* Provides intelligent, context-aware insights
+* Detects nuanced bugs and optimization opportunities
+* Generates human-like explanations
+
+> Enhances static analysis with deeper reasoning and contextual intelligence
+
+---
+
+## 🛠️ Tech Stack
+
+* **Python**
+* **Streamlit** (Web UI)
+* **Pylint, Flake8, Radon, Bandit**
+* **Google Gemini API (LLM Integration)**
+
+---
+
+## ⚙️ System Architecture
+
+```
+User Code Input
+      ↓
+Static Analysis Layer (Pylint, Flake8, Radon, Bandit)
+      ↓
+AI Understanding Layer (Gemini / Logic Engine)
+      ↓
+Adaptive Feedback Engine
+      ↓
+Final Report (Score + Insights + Recommendations)
+```
+
+---
+
+## ▶️ How to Run
 
 ```bash
-# Clone the repository
-git clone <your-repo-url>
-cd code-review-analyzer
-
-# Install dependencies
 pip install -r requirements.txt
+streamlit run app.py
 ```
 
-### Setup Gemini API (Optional but Recommended)
+---
 
-1. Get a free API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Set environment variable:
+## 🧪 Usage Options
 
-```bash
-# Linux/Mac
-export GEMINI_API_KEY="your_api_key_here"
-
-# Windows
-set GEMINI_API_KEY=your_api_key_here
-```
-
-## Usage
-
-### Option 1: Command Line Interface (CLI)
+### 💻 CLI Mode
 
 ```bash
 python main.py sample_bad_code.py
 ```
 
-**Output**: Analysis report printed to console and saved to `reports/review_report.txt`
+* Generates console output
+* Saves report in `/reports`
 
-### Google Colab CLI Demo
+---
 
-A Google Colab notebook is provided to demonstrate the CLI-based workflow of the Code Review Analyzer without requiring local setup.
-
-🔗 Colab Notebook: https://colab.research.google.com/drive/1BO9liraKOedM8cWvMAiSyAF6zfiuQWdZ#scrollTo=2118rW8JjHDa
-
-This notebook runs the core CLI analysis and showcases report generation in a cloud-based environment.
-
-
-### Option 2: Web Interface (Streamlit)
+### 🌐 Web Interface (Streamlit)
 
 ```bash
 streamlit run app.py
 ```
 
-**Web Interface Features**:
-- Upload Python files or paste code directly
-- Configure analysis options
-- Interactive results with tabbed views
-- Download reports as files
+Features:
 
-### Streamlit UI Demo
-
-A live interactive Streamlit interface for the Code Review Analyzer is available here:  
-🔗 Live Streamlit App: http://automated-code-review-tool.streamlit.app/
-
-This web interface allows users to upload Python files or paste code directly and view analysis results in an interactive format.
-
-
-## Project Structure
-
-```
-code-review-analyzer/
-├── main.py                  # CLI entry point
-├── app.py                   # Streamlit web UI
-├── config.py                # Configuration settings
-├── static_analyzer.py       # Static analysis tools
-├── llm_integrator.py        # Gemini AI integration
-├── report_generator.py      # Report generation
-├── requirements.txt         # Dependencies
-├── sample_bad_code.py       # Sample code for testing
-└── reports/                 # Generated reports
-    └── review_report.txt
-```
-
-## Approach
-
-The analyzer combines multiple specialized tools for comprehensive code review:
-
-**Static Analysis Tools** (Free, unlimited):
-- **Pylint**: Detects code errors and enforces coding standards
-- **Flake8**: Checks code style and formatting
-- **Radon**: Analyzes code complexity and maintainability metrics
-- **Bandit**: Identifies common security vulnerabilities
-
-**AI-Powered Analysis** (Gemini API):
-- Provides intelligent, context-aware code review
-- Identifies nuanced bugs and optimization opportunities
-- Generates detailed explanations and suggestions
-
-This hybrid approach combines the precision of static analysis with the contextual understanding of AI.
-
-## Configuration
-
-Edit `config.py` to customize:
-
-- **Gemini Models**: Choose which models to use
-- **Complexity Thresholds**: Adjust analysis sensitivity
-- **Enabled Tools**: Toggle specific analyzers on/off
-- **Report Settings**: Output format and location
-
-## Gemini API Limitations
-
-The tool uses Google's free tier Gemini API with the following rate limits:
-
-**gemini-1.5-flash**
-- Up to 15 requests per minute
-- Up to 1,000,000 tokens per minute
-
-**gemini-1.5-pro**
-- Up to 2 requests per minute
-- Up to 32,000 tokens per minute
-
-**Automatic Fallback**: If quota is exceeded on one model, the tool automatically tries the next model in the configured list.
-
-## Sample Output
-
-```
-Code Review Report
-==================================================
-
-Bugs and Logical Errors:
---------------------------------------------------
-  • Line 29: Index out of bounds: Using len(arr) instead of len(arr)-1
-    Code: return arr[len(arr)]
-  • Line 20: Potential division by zero without validation
-    Code: return a / b
-  • Line 74: Mutable default argument (list)
-    Code: def add_to_list(item, my_list=[]):
-
-Optimization Opportunities:
---------------------------------------------------
-  • High complexity in 'calc': Score 15
-    → Fix: Simplify function logic, break into smaller functions
-  • Security [HIGH/HIGH] at line 41:
-    Command injection detected in os.system()
-
-Summary:
---------------------------------------------------
-  Total issues found: 35
-  • Bugs: 8
-  • Style: 22
-  • Optimizations: 5
-```
-
-## Troubleshooting
-
-### Quota Exceeded Error
-```
-gemini-1.5-pro quota exceeded, trying next model...
-```
-**Solution**: Wait 60 seconds or the system will automatically use `gemini-1.5-flash` which has higher limits.
-
-### No API Key Warning
-```
-WARNING: GEMINI_API_KEY environment variable not set.
-```
-**Solution**: Set your API key to enable AI analysis, or continue with static analysis only.
-
-### Import Errors
-```
-ModuleNotFoundError: No module named 'streamlit'
-```
-**Solution**: Run `pip install -r requirements.txt` to install all dependencies.
-
-## Dependencies
-
-All required packages are listed in `requirements.txt`. Install with:
-```bash
-pip install -r requirements.txt
-```
-
-Key dependencies include:
-- `streamlit` - Web UI framework
-- `pylint` - Code analysis
-- `flake8` - Style checking
-- `radon` - Complexity analysis
-- `bandit` - Security scanning
-- `google-generativeai` - Gemini API client
-
-## Acknowledgments
-
-- Built with [Pylint](https://pylint.org/), [Flake8](https://flake8.pycqa.org/), [Radon](https://radon.readthedocs.io/), and [Bandit](https://bandit.readthedocs.io/)
-- AI powered by [Google Gemini](https://deepmind.google/technologies/gemini/)
-- UI built with [Streamlit](https://streamlit.io/)
+* Upload or paste code
+* Interactive analysis dashboard
+* Downloadable reports
 
 ---
 
-**Happy Coding!**
+## 📊 Example Output
+
+* 🧠 Code Intent Explanation
+* ⚡ Performance Warnings
+* 🎯 Personalized Suggestions
+* 📊 Code Quality Score
+* 📈 Complexity Analysis
+
+---
+
+## 💡 Innovation
+
+This system introduces a **lightweight adaptive AI layer** that:
+
+* Understands code behavior
+* Predicts future issues
+* Provides contextual recommendations
+* Simulates intelligent code review systems
+
+> Designed as a foundation for next-generation AI developer tools
+
+---
+
+## 📁 Project Structure
+
+```
+code-review-analyzer/
+├── main.py
+├── app.py
+├── config.py
+├── static_analyzer.py
+├── llm_integrator.py
+├── report_generator.py
+├── requirements.txt
+├── sample_bad_code.py
+└── reports/
+```
+
+---
+
+## ⚠️ Setup (Optional - Gemini API)
+
+Set API key:
+
+```bash
+# Windows
+set GEMINI_API_KEY=your_api_key
+
+# Linux/Mac
+export GEMINI_API_KEY=your_api_key
+```
+
+---
+
+## 📌 Future Enhancements
+
+* 🔄 User behavior tracking (adaptive learning system)
+* 🌐 Multi-language support
+* 🤖 Advanced LLM integration
+* 📊 Analytics dashboard
+* ☁️ Cloud deployment
+
+---
+
+## 🙏 Acknowledgments
+
+* Built with **Pylint, Flake8, Radon, and Bandit**
+* AI powered by **Google Gemini**
+* UI built with **Streamlit**
+
+---
+
+## 👩‍💻 Author
+
+**Roobhasri S**
+B.Tech Artificial Intelligence & Data Science
+
+---
+
+## 🎯 Project Vision
+
+> “To transform code review from rule-based checking into an intelligent, adaptive, and insight-driven system.”
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving it a ⭐ on GitHub!
+
+---
+
+**Happy Coding! 🚀**
