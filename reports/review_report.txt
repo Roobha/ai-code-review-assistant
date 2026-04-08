@@ -1,0 +1,124 @@
+Code Review Report
+==================================================
+
+Bugs and Logical Errors:
+--------------------------------------------------
+  • Line 31: Potential division by zero without validation
+    Code: return a / b
+  • Line 36: Index out of bounds: Using len(arr) instead of len(arr)-1
+    Code: return arr[len(arr)]
+  • Line 48: Unreachable code after return statement
+    Code: print("This will never execute")
+  • Line 48: Missing error handling for int() conversion
+    Code: print("This will never execute")
+  • Line 62: Missing error handling for int() conversion
+    Code: return int(text)
+  • Line 84: Mutable default argument (list) - will persist across calls
+    Code: def add_to_list(item, my_list=[]):
+  • Line 91: Potential infinite loop: variable "n" may not be modified
+    Code: while n > 0:
+  • Line 92: Missing error handling for int() conversion
+    Code: print(n)
+  • Line 118: Missing error handling for int() conversion
+    Code: age = int(age_str)
+  • Line 154: Missing error handling for int() conversion
+    Code: print("Testing bad code...")
+  • Line 157: Missing error handling for int() conversion
+    Code: print(f"Result: {x}")
+  • Line 161: Missing error handling for int() conversion
+    Code: print(f"Duplicates: {duplicates}")
+  • Line 164: Missing error handling for int() conversion
+    Code: print(f"Authenticated: {authenticated}")
+  • Line 169: Missing error handling for int() conversion
+    Code: print(f"List1: {list1}, List2: {list2}")
+  • Line 173: Missing error handling for int() conversion
+    Code: print("Done!")
+
+Code Style Issues:
+--------------------------------------------------
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:2:1: F401 'random' imported but unused
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:5:31: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:9:10: E225 missing whitespace around operator
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:9:12: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:11:27: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:12:31: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:18:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:21:35: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:23:42: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:29:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:30:1: W293 blank line contains whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:35:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:36:25: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:40:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:41:19: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:42:1: W293 blank line contains whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:45:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:48:41: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:56:38: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:61:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:62:21: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:66:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:66:8: E231 missing whitespace after ','
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:66:10: E231 missing whitespace after ','
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:66:14: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:67:6: E225 missing whitespace around operator
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:67:10: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:68:6: E225 missing whitespace around operator
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:69:6: E225 missing whitespace around operator
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:78:30: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:84:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:84:35: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:90:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:93:1: W293 blank line contains whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:97:1: E303 too many blank lines (4)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:104:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:105:22: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:109:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:112:32: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:117:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:118:23: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:125:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:126:1: E302 expected 2 blank lines, found 0
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:129:14: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:134:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:135:65: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:140:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:141:1: W293 blank line contains whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:147:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:147:80: E501 line too long (140 > 79 characters)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:148:80: E501 line too long (112 > 79 characters)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:152:1: E303 too many blank lines (3)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:155:1: W293 blank line contains whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:156:17: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:158:1: W293 blank line contains whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:160:39: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:165:1: W293 blank line contains whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:167:5: E303 too many blank lines (2)
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:168:27: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:169:45: W291 trailing whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:172:1: W293 blank line contains whitespace
+  • C:\Users\ASUS\AppData\Local\Temp\tmpz1dm2cky.py:173:19: W292 no newline at end of file
+
+Optimization Opportunities:
+--------------------------------------------------
+  • Medium complexity in 'find_duplicates': Score 6
+    → Consider: Refactoring for better readability
+  • Medium complexity in 'complex_logic': Score 6
+    → Consider: Refactoring for better readability
+  • Security [LOW/MEDIUM] at line 5:
+    hardcoded_password_string: Possible hardcoded password: 'admin123'
+  • Security [HIGH/HIGH] at line 41:
+    start_process_with_a_shell: Starting a process with a shell, possible injection detected, security issue.
+  • Security [LOW/MEDIUM] at line 98:
+    hardcoded_password_string: Possible hardcoded password: 'password123'
+  • Security [MEDIUM/HIGH] at line 105:
+    blacklist: Use of possibly insecure function - consider using safer ast.literal_eval.
+  • Security [MEDIUM/LOW] at line 135:
+    hardcoded_sql_expressions: Possible SQL injection vector through string-based query construction.
+
+Summary:
+--------------------------------------------------
+  Total issues found: 84
+  • Bugs: 15
+  • Style: 62
+  • Optimizations: 7
